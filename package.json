@@ -1,0 +1,11 @@
+{
+  "name": "monster-calculator",
+  "version": "0.1.0",
+  "description": "A Monsterously Large Jquery Calculator",
+  "devDependencies": {
+    "event-stream": "^3.1.5",
+    "gulp": "^3.6.2",
+    "gulp-concat": "^2.2.0",
+    "gulp-uglify": "^0.3.0"
+  }
+}

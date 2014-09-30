@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>Monster Calculator | A Monsterously Large Jquery Calculator </title>
+        <link rel="stylesheet" type="text/css" href="web.css" />
+    </head>
+    <body>
+
+        <div class="calculator">
+
+            <form action="" name="calculator" id="calculator" method="post">
+                <input type="text" id="output" />
+            </form>
+
+            <div class="key-holder">
+
+                <div class="key">&#40;</div>
+                <div class="key">&#41;</div>
+                <div class="key">&#37;</div>
+                <div class="key ac">AC</div>
+
+                <div class="key">7</div>
+                <div class="key">8</div>
+                <div class="key">9</div>
+                <div class="key">&#247;</div>
+
+                <div class="key">4</div>
+                <div class="key">5</div>
+                <div class="key">6</div>
+                <div class="key">&#120;</div>
+
+                <div class="key">1</div>
+                <div class="key">2</div>
+                <div class="key">3</div>
+                <div class="key">&#45;</div>
+
+                <div class="key">0</div>
+                <div class="key">&#46;</div>
+                <div class="key equal">&#61;</div>
+                <div class="key">&#43;</div>
+
+            </div>
+
+        </div>
+
+        <script type="text/javascript" src="monster-calculator.min.js"></script>
+        <script type="text/javascript">
+        $(function() {
+            $('.calculator').calculator();
+        });
+        </script>
+    </body>
+</html>
