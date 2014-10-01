@@ -18,6 +18,10 @@
     text-align: right;
 }
 
+input:focus{
+    outline: 0;
+}
+
 .calculator .key-holder {
     display: inline-block;
 }
@@ -34,6 +38,11 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    -webkit-transition: background 0.2s;
+    -moz-transition: background 0.2s;
+    -ms-transition: background 0.2s;
+    -o-transition: background 0.2s;
+    transition: background 0.2s;
 }
 
 .calculator .key:hover {
@@ -45,5 +54,5 @@
 }
 
 .calculator .equal {
-    background: #0057A3;
+    background: #222222;
 }

@@ -4,8 +4,18 @@ var concat = require('gulp-concat'),
 	gulp = require('gulp'),
 	uglify = require('gulp-uglify');
 
-// Uglify task
-gulp.task('uglify', function() {
+// monster-calculator task
+gulp.task('monster-calculator', function() {
+	return es.merge(
+		gulp.src(['monster-calculator.js'])
+		.pipe(uglify({mangle: false}))
+		.pipe(concat('monster-calculator.min.js'))
+		.pipe(gulp.dest(''))
+	);
+});
+
+// monster-calculator-dependants task
+gulp.task('monster-calculator-dependants', function() {
 	return es.merge(
 		gulp.src([
 			'jquery-1.11.1.js',
@@ -14,15 +24,15 @@ gulp.task('uglify', function() {
 			'monster-calculator.js'
 		])
 		.pipe(uglify({mangle: false}))
-		.pipe(concat('monster-calculator.min.js'))
+		.pipe(concat('monster-calculator-dependants.min.js'))
 		.pipe(gulp.dest(''))
 	);
 });
 
 // Watch task
 gulp.task('watch', function() {
-	gulp.watch('*.js', ['uglify']);
+	gulp.watch('monster-calculator.js', ['monster-calculator', 'monster-calculator-dependants']);
 });
 
 // Default task
-gulp.task('default', ['uglify', 'watch']);
+gulp.task('default', ['watch']);
